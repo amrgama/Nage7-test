@@ -1,0 +1,10 @@
+/* .barcode{
+    background: white;
+    color: gray;
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+} */
+.barcode>svg{
+    width:140px !important
+}

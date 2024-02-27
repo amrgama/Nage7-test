@@ -1,0 +1,12 @@
+#select-add-user-student{
+    display: flex !important;
+    align-items: center !important;
+    padding: 3px !important;
+}
+#defaultSelect{
+    padding: 16.5px 14px !important;
+}
+input[type="number"]{
+    text-align: end;
+    direction: ltr;
+}

@@ -1,0 +1,16 @@
+input[type="file"] {
+  display: none;
+}
+.custom__file__upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.img__preview {
+  display: flex;
+  justify-content: flex-start;
+
+  margin-bottom: 15px;
+  height: 100px;
+}

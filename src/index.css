@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Tajawal", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.main_container {
+  margin: 30px;
+  padding: 20px;
+  background-color: #fff;
+}
+.error_message {
+  text-align: start;
+  color: #e53b50;
+}

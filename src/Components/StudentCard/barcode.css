@@ -1,0 +1,9 @@
+.barcode>svg{
+    width:140px !important
+}
+.barcode{
+    background-color: white;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+}
