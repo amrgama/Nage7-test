@@ -187,7 +187,8 @@ const ViewAssistants = () => {
                   <IconButton
                     className={classes.editButton}
                     LinkComponent={Link}
-                    to={`${routePath}store/edit/${params.id}`}
+                    // to={`${routePath}store/edit/${params.id}`}
+                    to={`${routePath}store/edit/132`}
                   >
                     <EditIcon />
                   </IconButton>

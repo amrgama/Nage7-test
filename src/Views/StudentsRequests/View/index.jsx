@@ -65,8 +65,8 @@ const ViewStudentRequests = () => {
     fetcher: () =>
       requestService.getAll({
         target: teacher.id,
-        status: "WAITING",
-        creatorType: "STUDENT",
+        // status: "WAITING",
+        // creatorType: "STUDENT",
         page,
         limit: pageSize,
       }),

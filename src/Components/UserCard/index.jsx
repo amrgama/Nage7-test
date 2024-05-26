@@ -21,8 +21,8 @@ const UserCart = ({ user }) => {
     <Box sx={classes.userCard}>
       <Box component="figure">
         <img
-          src={user.image ? `${API_ENDPOINT}${user.image}` : userAvatar}
-          alt={`${user.name} `}
+          src={user.image ? `${API_ENDPOINT}${user?.image}` : userAvatar}
+          alt={`${user?.name} `}
         />
       </Box>
       <Box textAlign={'center'}>
@@ -30,7 +30,7 @@ const UserCart = ({ user }) => {
       </Box>
       <Box 
       component={'a'}  
-      href={`https://api.whatsapp.com/send?phone=2${user.parentNumber}&text=${strings.welcomeParent}%0Ahttps://nage7-parent-portal.vercel.app/${user.encrptedCode}`}
+      href={`https://api.whatsapp.com/send?phone=2${user?.parentNumber}&text=${strings.welcomeParent}%0Ahttps://nage7-rds.com/nage7-parent/${user?.encrptedCode}`}
       target="_blank"
        bgcolor={'#42E760'} 
        borderRadius={1.5}
@@ -59,7 +59,7 @@ const UserCart = ({ user }) => {
           {strings.name}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.name ?? ""}
+          {user?.name ?? ""}
         </Typography>
       </Typography>
       <Typography>
@@ -67,7 +67,7 @@ const UserCart = ({ user }) => {
           {strings.code}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.code ?? ""}
+          {user?.code ?? ""}
         </Typography>
       </Typography>
       <Typography>
@@ -75,15 +75,15 @@ const UserCart = ({ user }) => {
           {strings.mobile}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.phone ?? ""}
+          {user?.phone ?? ""}
         </Typography>
       </Typography>
       <Typography>
         <Typography variant="h6" component="span">
-          {strings.parentNumber}:{" "}
+          {strings?.parentNumber}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.parentNumber ?? ""}
+          {user?.parentNumber ?? ""}
         </Typography>
       </Typography>
       <Typography>
@@ -91,7 +91,7 @@ const UserCart = ({ user }) => {
           {strings.schoolName}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.schoolName ?? strings.NotExist}
+          {user?.schoolName ?? strings.NotExist}
         </Typography>
       </Typography>
       <Typography>
@@ -99,7 +99,7 @@ const UserCart = ({ user }) => {
           {strings.schoolYear}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.level.name ?? ""}
+          {user?.level?.name ?? ""}
         </Typography>
       </Typography>
 
@@ -108,26 +108,26 @@ const UserCart = ({ user }) => {
           {strings.email}:{" "}
         </Typography>
         <Typography variant="subtitle1" component="span">
-          {user.email ?? strings.NotExist}
+          {user?.email ?? strings.NotExist}
         </Typography>
       </Typography>
-      {user.gender ? (
+      {user?.gender ? (
         <Typography>
           <Typography variant="h6" component="span">
             {strings.gender}:{" "}
           </Typography>
           <Typography variant="subtitle1" component="span">
-            {user.gender === "MALE" ? strings.male : strings.female}
+            {user?.gender === "MALE" ? strings.male : strings.female}
           </Typography>
         </Typography>
       ) : null}
-      {user.birthDate ? (
+      {user?.birthDate ? (
         <Typography>
           <Typography variant="h6" component="span">
             {strings.birthDate}:{" "}
           </Typography>
           <Typography variant="subtitle1" component="span">
-            {format(new Date(user.birthDate), "dd/MM/yyyy")}
+            {format(new Date(user?.birthDate), "dd/MM/yyyy")}
           </Typography>
         </Typography>
       ) : null}

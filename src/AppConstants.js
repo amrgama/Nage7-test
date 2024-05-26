@@ -1,6 +1,6 @@
 // export const API_ENDPOINT = "https://nage7-rds.com/nage7-backend"
-export const API_ENDPOINT = "https://nage7-rds.com/production-nage7-backend";
-//export const API_ENDPOINT = process.env.NODE_ENV !== "production" ? "https://nage7-rds.com/nage7-backend" : "https://nage7-rds.com/production-nage7-backend";
+// export const API_ENDPOINT = "https://nage7-rds.com/production-nage7-backend";
+export const API_ENDPOINT = process.env.NODE_ENV !== "production" ? "https://nage7-rds.com/nage7-backend" : "https://nage7-rds.com/production-nage7-backend";
 export const routePath = "/nage7-teacher/";
 export const LangName = "nageh-Lang";
 export const TokenName = "nageh-Teacher-Token";

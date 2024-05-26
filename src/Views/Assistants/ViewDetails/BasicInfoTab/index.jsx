@@ -9,7 +9,7 @@ import styles from "../styles";
 const BasicInfo = ({ user }) => {
   const theme = useTheme();
   const classes = styles(theme);
-
+  console.log("user", user)
   return (
     <Grid
       container
@@ -26,7 +26,10 @@ const BasicInfo = ({ user }) => {
         >
           {strings.teacher}
         </Typography>
-        <UserCard user={user} />
+        {
+          !!Object.keys(user).length &&
+          <UserCard user={user} />
+        }
       </Grid>
     </Grid>
   );

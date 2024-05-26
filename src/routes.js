@@ -53,6 +53,7 @@ import EditOfflineExam from "Views/OfflineExams/Edit";
 import ViewOfflineExam from "Views/OfflineExams/ViewDetails";
 import AddGrade from "Views/OfflineExams/ViewDetails/AddGrade";
 import EditExamModule from "Views/ExamModules/Edit";
+import ViewDetails from "Views/Assistants/ViewDetails";
 
 export function Loading() {
   return (
@@ -105,7 +106,7 @@ const routes = [
   { path: `${routePath}assistants`, Component: ViewAssistants },
   { path: `${routePath}assistants/add`, Component: AddAssistant },
   { path: `${routePath}assistants/edit/:id`, Component: EditAssistant },
-  { path: `${routePath}assistants/view/:id`, Component: ViewStudent },
+  { path: `${routePath}assistants/view/:id`, Component: ViewDetails },
   { path: `${routePath}lessons`, Component: ViewLessons },
   { path: `${routePath}lessons/add`, Component: AddLesson },
   { path: `${routePath}lessons/edit/:id`, Component: EditLesson },

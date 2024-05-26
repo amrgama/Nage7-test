@@ -85,7 +85,7 @@ const AddAssistant = () => {
     data.file = image.file;
 
     try {
-      await storeServices.add(data);
+      await storeE.add(data);
       navigate(`${routePath}store`);
     } catch (error) {
       console.log("error when add product ", error);

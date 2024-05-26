@@ -66,6 +66,7 @@ const AddAssistant = () => {
     let imgUrl = URL.createObjectURL(imgFile);
     return { imgUrl: imgUrl, file: imgFile };
   };
+
   const handleAdd = async ({ confirmPassword, image, ...values }) => {
     setLoading(true);
     const data = new FormData();
@@ -75,9 +76,12 @@ const AddAssistant = () => {
     if (image.file) {
       data.append("image", image.file);
     }
+    data.forEach((value, key) => {
+        console.log("formData", key, value, typeof value);
+      });
     try {
-      await assistantServices.add(data);
-      navigate(`${routePath}assistants`);
+      // await assistantServices.add(data);
+      // navigate(`${routePath}assistants`);
     } catch (error) {
       console.log("error when add user ", error);
       error?.response?.data?.errors?.forEach?.(({ param, msg }) => {
