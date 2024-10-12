@@ -19,7 +19,7 @@ export const StudentCardFront = ({ student, group, cardType = "Default" }) => {
   const fallback = `/images/cards/${student.gender}_STUDENT.png`;
 
   console.log("StudentCardFront===>", student);
-
+  console.log("image name", `${cardType}_front`)
   return (
     <div
       style={{

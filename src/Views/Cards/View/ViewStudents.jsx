@@ -147,7 +147,7 @@ const ViewStudents = () => {
   const handlePrint = async () => {
     setPrintLoading(true);
     try {
-      const res = await groupStudentServices.print({ students: selectedRows });
+      const res = await groupStudentServices.print({ students: selectedRows, cardType: "default" });
       setCards([...res.data.data]);
       // TODO: Implement Print Below
       // Here
